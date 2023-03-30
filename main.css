@@ -1,0 +1,119 @@
+/* GOOGLE FONTS STYLE */
+
+/* manrope-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/manrope-v13-latin-800.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../fonts/manrope-v13-latin-800.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* END */
+
+/* GLOBAL style */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #202733;
+  color: #cee3e9;
+  display: grid;
+  place-items: center;
+  font-family: "Manrope", "Arial", sans-serif;
+}
+
+.box {
+  width: 100%;
+  max-width: 540px;
+  grid-template-rows: auto;
+  padding: 4.8rem 4.8rem 0 4.8rem;
+  background-color: #313a48;
+  border-radius: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+p {
+  display: block;
+  margin-bottom: 2.4rem;
+  font-size: 1.3rem;
+  line-height: 1.36;
+  letter-spacing: 0.3rem;
+  color: #53ffaa;
+}
+
+h2 {
+  margin-bottom: 4rem;
+  font-size: 2.8rem;
+  line-height: 1.36;
+  letter-spacing: -0.3px;
+}
+
+#line {
+  margin-bottom: 8rem;
+}
+
+#line-small {
+  display: none;
+}
+
+#oval {
+  width: 64px;
+  height: 64px;
+  background: #53ffaa;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: -6.4rem;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#oval:hover {
+  background: #53ffaa;
+  box-shadow: 0px 0px 40px #53ffaa;
+}
+
+/* responsive */
+
+@media (max-width: 576px) {
+  body {
+    padding: 0 1.6rem;
+  }
+  .box {
+    padding: 4rem 2.4rem 0 2.4rem;
+  }
+  #line {
+    display: none;
+  }
+  #line-small {
+    display: inline-block;
+    margin-bottom: 8rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+}
